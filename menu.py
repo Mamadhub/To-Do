@@ -43,7 +43,8 @@ def new_note():
     f.new_file(name, note)
 
 def show_note():
-    name = input
+    name = input('please enter name:')
+    f.show_text(name)
 
 
 def input_menu():
@@ -62,6 +63,11 @@ def input_menu():
                 menu() 
     if number_input == 4:
         show_note()
+        while 1:
+            time.sleep(0.5)
+            q = input("wait? (y/n):")
+            if q == 'n':
+                menu() 
     if number_input == 3:
         print('good byyy !!!')
         sys.exit()
