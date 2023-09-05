@@ -1,4 +1,4 @@
-class file:
+class filesss:
     
     def __init__(self):
         self.files_name = []
@@ -33,6 +33,10 @@ class file:
         for name in self.files_name:
             self.files_data[name] =  self.load_file(name)
 
+    def add_text(self, name, added_text):
+        file = open(f'filess/{name}.txt', 'a')
+        file.write(added_text)
+        
     
     
 
